@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2015-07-30
+  mood: MyString
+  activity: MyString
+  drinks: 1
+  people_talked: 1
+  rating: 1
+  coffee: 1
+  notes: MyString
+  text: MyString
+
+two:
+  date: 2015-07-30
+  mood: MyString
+  activity: MyString
+  drinks: 1
+  people_talked: 1
+  rating: 1
+  coffee: 1
+  notes: MyString
+  text: MyString

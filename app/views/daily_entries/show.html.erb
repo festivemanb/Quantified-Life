@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @daily_entry.date %>
+</p>
+
+<p>
+  <strong>Mood:</strong>
+  <%= @daily_entry.mood %>
+</p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @daily_entry.activity %>
+</p>
+
+<p>
+  <strong>Drinks:</strong>
+  <%= @daily_entry.drinks %>
+</p>
+
+<p>
+  <strong>People talked:</strong>
+  <%= @daily_entry.people_talked %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @daily_entry.rating %>
+</p>
+
+<p>
+  <strong>Coffee:</strong>
+  <%= @daily_entry.coffee %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @daily_entry.notes %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @daily_entry.text %>
+</p>
+
+<%= link_to 'Edit', edit_daily_entry_path(@daily_entry) %> |
+<%= link_to 'Back', daily_entries_path %>

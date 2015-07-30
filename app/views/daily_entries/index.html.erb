@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Daily Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Mood</th>
+      <th>Activity</th>
+      <th>Drinks</th>
+      <th>People talked</th>
+      <th>Rating</th>
+      <th>Coffee</th>
+      <th>Notes</th>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @daily_entries.each do |daily_entry| %>
+      <tr>
+        <td><%= daily_entry.date %></td>
+        <td><%= daily_entry.mood %></td>
+        <td><%= daily_entry.activity %></td>
+        <td><%= daily_entry.drinks %></td>
+        <td><%= daily_entry.people_talked %></td>
+        <td><%= daily_entry.rating %></td>
+        <td><%= daily_entry.coffee %></td>
+        <td><%= daily_entry.notes %></td>
+        <td><%= daily_entry.text %></td>
+        <td><%= link_to 'Show', daily_entry %></td>
+        <td><%= link_to 'Edit', edit_daily_entry_path(daily_entry) %></td>
+        <td><%= link_to 'Destroy', daily_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Daily entry', new_daily_entry_path %>

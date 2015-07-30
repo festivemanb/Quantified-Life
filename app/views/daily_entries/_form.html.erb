@@ -1,0 +1,53 @@
+<%= form_for(@daily_entry) do |f| %>
+  <% if @daily_entry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@daily_entry.errors.count, "error") %> prohibited this daily_entry from being saved:</h2>
+
+      <ul>
+      <% @daily_entry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :mood %><br>
+    <%= f.text_field :mood %>
+  </div>
+  <div class="field">
+    <%= f.label :activity %><br>
+    <%= f.text_field :activity %>
+  </div>
+  <div class="field">
+    <%= f.label :drinks %><br>
+    <%= f.number_field :drinks %>
+  </div>
+  <div class="field">
+    <%= f.label :people_talked %><br>
+    <%= f.number_field :people_talked %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label :coffee %><br>
+    <%= f.number_field :coffee %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
