@@ -1,8 +1,9 @@
 <%= form_for(@daily_entry) do |f| %>
+
+
   <% if @daily_entry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@daily_entry.errors.count, "error") %> prohibited this daily_entry from being saved:</h2>
-
       <ul>
       <% @daily_entry.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -17,11 +18,11 @@
   </div>
   <div class="field">
     <%= f.label :mood %><br>
-    <%= f.text_field :mood %>
+    <%= f.text_field :mood_list %>
   </div>
   <div class="field">
     <%= f.label :activity %><br>
-    <%= f.text_field :activity %>
+    <%= f.text_field :activity_list %>
   </div>
   <div class="field">
     <%= f.label :drinks %><br>
